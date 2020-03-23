@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ROSE plant</title>
+	<link rel="stylesheet" type="text/css" href="../static/stylenew.css">
+</head>
+<body>
+	<div class="container">
+		<div class="img-box">
+			<img id="pic" src="../static/ros.png"></div>
+			<div class="text-box">
+				<h1><label id="title"></label><br><span id="det"></span></h1>
+				<p id="details"></p>
+				<button onclick="window.location.href='1.htm'">Back</button>
+				<button onclick="save()">Save</button>
+			</div>
+		</div>
+		<script>
+			var ip= 'http://localhost:8050';
+			data=localStorage.getItem('data');
+			data=data.split("|");
+			console.log(data);
+			document.getElementById('det').innerHTML=data[1]+"<br>"+data[2];
+			document.getElementById('details').innerHTML=data[3];
+			imgsrc = 'data:image/png;base64,'+data[4];
+			document.getElementById('pic').setAttribute('src',imgsrc);
+			flowername=data[4].replace()
+			document.getElementById('title').innerHTML=data[0];
+        //document.getElementById('details').innerHTML=data;
+        function save(){
+        	email=localStorage.getItem('email');
+        	if(email==null){
+        		option=confirm("You need to login to save");
+        		if(option){
+        			window.location.href="new12.htm"
+        		}
+        	}
+        	else{
+        		var xhttp = new XMLHttpRequest();
+        		xhttp.onreadystatechange = function() {
+        			if (this.readyState == 4 && this.status == 200) {
+        				alert('search has been saved');
+        			}
+        		};
+        		xhttp.open("GET", ip+"/insertsearch?email="+email+"&data="+data[0], true);
+        		xhttp.send();
+        	}
+        }
+        
+    </script>
+</body>
+</html>

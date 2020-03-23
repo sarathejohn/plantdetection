@@ -1,0 +1,342 @@
+    .
+        {
+        	margin: 0px;
+        	padding: 0px;
+        	font-family: sans-serif;
+
+        }
+html, div {
+    position: fixed;
+    top: 288px;
+    margin: 0;
+    left: 316px;
+    padding: 0;
+    font-size: 100%;
+    font-family: "Helvetica Neue", "Microsoft YaHei", sans-serif;
+}
+
+        
+        .search-input {
+    vertical-align: top;
+    margin-left: 24px;
+    width: 452px;
+    height: 53px;
+    border: 0px;
+    outline: 0;
+    font-size: 22px;
+        }
+    
+        #panel
+        {
+        	position: fixed;
+        	width: 200px;
+        	height: 100%;
+        	left: -200px;
+        	background: #151719;
+        	top: 0px;
+        	transition: all 500ms linear;
+
+        }
+        .button
+        {  	   
+    background: none;
+    padding: 10% 20%;
+    font-size: 105%;
+    font-family: monospace;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #30C29A;
+    border-radius: 10px;
+    box-shadow: 0 0 6px grey;
+    width: 183%;
+    background-color: #ffffff;
+    top: -262px;
+    left: 1363%;
+        }
+        #panel.active
+        {
+        	left: 0px;
+
+        }
+        #panel ul li
+        {
+        	color: rgba(230,230,230,0.9);
+        	list-style: none;
+        	padding: 15px 10px;
+        	border-bottom: 1px solid rgba(100,100,100,0.3);
+
+        }
+        #panel .toggle-btn
+        {
+        	position: absolute;
+        	left: 230px;
+        	top: 20px;
+
+        }
+        #panel .toggle-btn span
+        {
+        	display: block;
+        	width: 30px;
+        	height: 5px;
+        	background: #151719;
+        	margin: 3px 0px;
+
+        }
+            button
+        {  	   
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	transform: translate(-50%,-50%);
+
+        }
+        button
+        {
+background: black;
+    color:white;
+    width: 164%;
+    position: relative;
+    height: 28px;
+    box-shadow: 0 0 6px grey;
+    left: 1651%;
+    top: -250px;
+    border: 1px solid #338033;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .06s;
+    overflow: hidden;
+        }
+        button:focus
+        {
+        	outline: none;
+
+        }
+        button:before
+        {
+        	content: '';
+        	display: block;
+        	position: absolute;
+        	background: rgba(255,255,255,.5);
+        	width: 60px;
+        	height: 100%;
+        	left: 0;
+        	top: 0;
+        	opacity: .5s;
+        	filter: blur(30px);
+        	transform: translate(-130px) skewX(-15deg);
+
+
+        }
+        button:after
+        {
+        	        	content: '';
+        	display: block;
+        	position: absolute;
+        	background: rgba(255,255,255,.2);
+        	width: 30px;
+        	height: 100%;
+        	left: 30px;
+        	top: 0;
+        	opacity: 0;
+        	filter: blur(30px);
+        	transform: translate(-100px) scaleX(-15deg);
+        }
+        button:hover
+        {
+        	background:white;
+        	cursor: pointer;
+        	color: black;
+
+        }
+        button:hover:before
+        {
+        	transform: translate(300px) skewX(-15deg);
+        	opacity: 0.6;
+        	transition: 0.7s;
+        }
+                button:hover:after
+        {
+        	transform: translate(300px) skewX(-15deg);
+        	opacity: 1;
+        	transition: 0.7s;
+        }
+
+                .center-line {
+            position: absolute;
+            height: 32px;
+            width: 0px;
+            top: 16px;
+            border: 1px solid #dddddd;
+            vertical-align: center;
+        }
+
+       
+.search-icon {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: 9px;
+}
+                .label-search-icon-1 {
+            vertical-align: center;
+            width: 64px;
+            height: 64px;
+        }
+
+        .search-icon-1, .header-search-icon-1 {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .label-search-icon-2 {
+            width: 64px;
+            height: 64px;
+        }
+
+        .search-icon-2, .header-search-icon-2 {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            opacity: 0;
+        }
+          .header-search-box {
+            border: 1px solid #30C29A;
+            border-radius: 10px;
+            box-shadow: 0 0 6px gray;
+            width: 800px;
+            margin-top: 47px;
+            background-color: #ffffff;
+        }
+
+        .header-search-box:hover {
+            box-shadow: 0 0 10px gray;
+        }
+.immg
+{
+    height: 268px;
+    top: -199px;
+    position: relative;
+    left: 180px;
+    width: 312px;
+}
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+.image-upload > input
+		{
+			display: none;
+		}
+
+		.image-upload img
+		{
+			width: 80px;
+			cursor: pointer;
+		}
+#canvas{
+	     position: relative;
+    height: 562px;
+    width: 453px;
+    left: 29%;
+    top: 16px;
+    background-color: #483a00;
+    z-index: 2;
+    display: none;
+		}
+		#canvas button{
+        position: relative;
+    top: 119px;
+    left: 34px;
+    width: 93px;
+    height: 41px;
+    margin: 65px;
+    display: inline-block;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 11px;
+    overflow: hidden;
+    transition: 0.2s;
+    padding: 10px;
+		}
+        #canvas button:hover
+        {
+            color: #255784;
+            background: #2196f3;
+
+        }
+		#pic{
+width: 64%;
+    position: relative;
+    top: 17%;
+    left: 15%;
+		}
+        .now
+        {
+             position: relative;
+    height: 618px;
+    width: 673%;
+    left: -160%;
+    top: -288px;
+    background-color: white;
+    z-index: 2;
+        }
+@media (max-width: 1080px)
+{
+    body
+    {
+        height: auto;
+        width: auto;
+    }
+button {
+    left: 628px;
+    height: auto;
+    width: auto;
+}
+.header-search-box {
+    left: 201px;
+}
+.immg {
+    left: 14px;
+}
+   #canvas
+{     left: 22%;
+    top: 24%;
+}
+
+}
+@media (max-width: 1200px)
+{
+    body
+    {
+        height: auto;
+        width: auto;
+    }
+button {
+    left: 628px;
+    height: auto;
+    width: auto;
+}
+.header-search-box {
+    left: 201px;
+}
+.immg {
+    left: 14px;
+}
+   #canvas
+{     left: 22%;
+    top: 24%;
+} 
+}

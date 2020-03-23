@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>recent history</title>
+  <link rel="stylesheet" href="../static/styler.css">
+  <script>
+   function togglepanel() {
+    document.getElementById("panel").classList.toggle('active');
+  } 
+</script>
+</head>
+<body>
+  <div id="panel">
+    <div class="toggle-btn" onclick="togglepanel()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li onclick="window.location.href='1.htm'">Home</li>
+      <li>Contact</li>
+      <li>About</li>
+    </ul>
+  </div> 
+  <section>
+    <div class="container">
+      <header>
+        <h1>Activity Log</h1>
+        <p>Plants are mainly multicellular, predominantly photosynthetic eukaryotes of the kingdom Plantae. Historically, plants were treated as one of two kingdoms including all living things that were not animals, and all algae and fungi were treated as plants.</p>
+      </header>
+      <div>
+        <p id="p">No Activity</p>
+      </div>
+      <main id='main'>
+      </main>
+    </div>
+    <img id="baseImg">
+  </section>
+    <script>
+      var ip= 'http://localhost:8050';
+      email=localStorage.getItem('email');
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() 
+      {
+        if (this.readyState == 4 && this.status == 200) 
+        { 
+          recents=this.responseText.split('^');
+          for(var i=0;i<recents.length;i++)
+          {
+            recent=recents[i].split('|');
+            flower=recent[0];
+            console.log(recent);console.log(recent);
+            try{
+
+              var baseString = recent[4].trim();
+              console.log(recent[3]);
+              text="<div class='abc' style='display:block'><img src='data:image/png;base64,"+baseString+"' alt=''><div class='def'><h3>"+flower+" <span>flower</span></h3><p>By <a href='#'>Ashwin</a> | <a href='#'>Feb 08, 2020</a></p><a href='#' class='btn' id='link' onclick=show("+i+")>Read More</a></div></div>";
+              document.getElementById('main').innerHTML=document.getElementById('main').innerHTML+text;
+              document.getElementById('p').style.display="none";
+            }
+            catch{
+
+            }
+          }
+        }
+        else if(this.readyState==4 && this.status==0){
+            alert("connection error!");
+          }
+      }
+  console.log(email);
+  xhttp.open("GET", ip+'/retrievesearch?email='+email, true);
+  xhttp.send();
+          /*
+          function show(flower){
+              search = document.getElementById('search').value;
+           var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        localStorage.setItem('data',this.responseText);
+        window.location.href="rosenew.html";
+      }
+  }
+    xhttp.open("GET", ip+'/classify?flowername='+flower, true);
+    xhttp.send();
+  }*/
+  function show(index){
+    localStorage.setItem('data',recents[index])
+    window.location.href="rosenew.html"
+  }
+  </script>
+  </body>
+  </html>

@@ -1,0 +1,197 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: sans-serif;
+
+}
+.container
+{
+	width: 900px;
+	height: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+	margin: 20px;
+}
+.container .img-box
+{
+	width: 50%;
+	height: 100%;
+	background: #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+.container .img-box img
+{
+	width: 900px;
+}
+.container .text-box
+{
+	width: 50%;
+	padding: 20px 30px;
+	box-sizing: border-box;
+
+}
+.container .text-box h1
+{
+	font-size: 3em;
+	color: #444;
+	line-height: .4em
+}
+.container .text-box h1 span
+{
+	font-size: .4em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #666;
+	font-weight: 100;
+
+}
+.container .text-box p{
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #555;
+}
+
+
+.container .text-box .but1
+{        background: none;
+    padding: 6px;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #30C29A;
+    border-radius: 10px;
+    box-shadow: 0 0 6px grey;
+    width: 82px;
+    height: 34px;
+    background-color: #ffffff;
+    top: 7px;
+    left: 130px;
+}
+
+       
+  .container .text-box .but1:hover
+        {
+        	background:#30C29A;
+        	cursor: pointer;
+        	color: white;
+
+        }
+.container .text-box .but2
+{
+	     background: none;
+    padding: 6px;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #30C29A;
+    border-radius: 10px;
+    box-shadow: 0 0 6px grey;
+    width: 82px;
+    height: 34px;
+    background-color: #ffffff;
+    top: 7px;
+    left: 136px;
+}
+.container .text-box .but2:hover
+        {
+        	background:#30C29A;
+        	cursor: pointer;
+        	color: white;
+
+        }
+        .container .text-box .but3
+{
+	       background: none;
+    padding: 6px;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #30C29A;
+    border-radius: 10px;
+    box-shadow: 0 0 6px grey;
+    width: 82px;
+    height: 34px;
+    background-color: #ffffff;
+    top: 7px;
+    left: 143px;
+}
+.container .text-box .but3:hover
+        {
+        	background:#30C29A;
+        	cursor: pointer;
+        	color: white;
+
+        }
+@media(max-width: 1080px){
+	.container{
+		height: auto;
+	}
+	.container .img-box{
+		width: 100%;
+	}
+	.container .img-box img
+	{
+		width: 100%;
+		transform: rotate(0deg);
+		padding: 40px;
+		box-sizing: border-box;
+	}
+	.container .text-box{
+		width: 100%;
+	}
+	.container .text-box h1
+	{
+		font-size: 2em;
+		line-height: .8em;
+	}
+	.container .text-box h2
+	{
+		font-size: 2em;
+		font-weight: 300;
+	}
+	.container .text-box .but1
+	{
+		padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 30px;
+    position: relative;
+    top: -15px;
+    left: 13px;
+
+	}
+	.container .text-box .but2
+	{
+		padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 30px;
+    position: relative;
+    top: -15px;
+    left: 13px;
+	}
+	.container .text-box .but3
+	{
+		padding: 10px 15px;
+    font-size: 1em;
+    margin-top: 30px;
+    position: relative;
+    top: -15px;
+    left: 13px;
+
+	}
+}

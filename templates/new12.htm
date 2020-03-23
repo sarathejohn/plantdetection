@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link
+		rel="stylesheet"
+		href="http://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+		crossorigin="anonymous"
+		/>
+	<title></title>
+	<link rel="stylesheet" href="../static/style3.css">
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form onsubmit="event.preventDefault()">
+			<h1>Create Account</h1>
+			
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" id="signuptext">
+			<input type="email" placeholder="Email"  id="signupemail">
+			<input type="password" placeholder="Password"  id="pass">
+			<button onclick="signup()" >Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form>
+			<h1>Sign in</h1>
+			<input type="email" placeholder="Email" id="signinemail" />
+			<input type="password" placeholder="Password" id="password" />
+			<a href="#" onclick="">Forgot your password?</a>
+			<button onclick="signin()" id="">Sign In</button>
+			<button class="ghost" id="but" onclick="window.location.href='1.htm'">back</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    var ip= 'http://localhost:8050';
+function signup(){
+	var name=document.getElementById('signuptext').value;
+	var email1=document.getElementById('signupemail').value;
+	var pass1=document.getElementById('pass').value;
+    //alert(pass1);
+    console.log(ip+'/signup?name='+name+'&email='+email1+'&password='+pass1);
+	var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        if(this.responseText=="yes"){
+            alert('signup successfull');
+            localStorage.setItem('name',name);
+            localStorage.setItem('email',email1);
+            window.location.href="1.htm";
+        }
+        else{
+            alert('email id already exists, please try another email');
+        }
+    }
+  };
+  xhttp.open("GET", ip+'/signup?name='+name+'&email='+email1+'&password='+pass1, true);
+  xhttp.send();
+	}
+ function signin()
+	{
+
+	var email2=document.getElementById('signinemail').value;
+	var pass2=document.getElementById('password').value;
+        var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    if(this.responseText=="no")
+    	alert("incorrect email/password, please try again");
+    else{
+        alert('signin successfull');
+            localStorage.setItem('name',this.responseText);
+            localStorage.setItem('email',email2);
+            window.location.href="1.htm";
+    }
+}
+    }
+  xhttp.open("GET", ip+'/signin?email='+email2+'&password='+pass2, true);
+  xhttp.send();
+}
+
+</script>
+
+<script src="../static/new12.js"></script>
+</body>
+</html>
