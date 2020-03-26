@@ -23,24 +23,32 @@ body
 }
 .container .img-box
 {
-	width: 50%;
-	height: 100%;
-	background: #ccc;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
+	    width: 50%;
+    top: -2px;
+    height: 100%;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
 
 }
-.container .img-box img
+.container .img-box .img
 {
-	width: 900px;
+	        position: relative;
+    width: 416px;
+    height: 416px;
+    object-fit: contain;
+    object-position: center;
 }
 .container .text-box
 {
 	width: 50%;
-	padding: 20px 30px;
-	box-sizing: border-box;
+    height: 604px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    overflow: scroll;
 
 }
 .container .text-box h1
@@ -59,9 +67,12 @@ body
 
 }
 .container .text-box p{
-	font-size: 1em;
-	line-height: 1.5em;
-	color: #555;
+	       font-size: 1em;
+    line-height: 1.5em;
+    color: #555;
+    position: relative;
+    text-align: justify;
+    top: -13px;
 }
 
 
@@ -82,7 +93,6 @@ body
     left: 130px;
 }
 
-       
   .container .text-box .but1:hover
         {
         	background:#30C29A;
