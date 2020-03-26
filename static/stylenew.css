@@ -23,32 +23,24 @@ body
 }
 .container .img-box
 {
-	    width: 50%;
-    top: -2px;
-    height: 100%;
-    background: #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
+	width: 50%;
+	height: 100%;
+	background: #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 
 }
-.container .img-box .img
+.container .img-box img
 {
-	        position: relative;
-    width: 416px;
-    height: 416px;
-    object-fit: contain;
-    object-position: center;
+	width: 900px;
 }
 .container .text-box
 {
 	width: 50%;
-    height: 604px;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    overflow: scroll;
+	padding: 20px 30px;
+	box-sizing: border-box;
 
 }
 .container .text-box h1
@@ -67,12 +59,9 @@ body
 
 }
 .container .text-box p{
-	       font-size: 1em;
-    line-height: 1.5em;
-    color: #555;
-    position: relative;
-    text-align: justify;
-    top: -13px;
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #555;
 }
 
 
@@ -93,6 +82,7 @@ body
     left: 130px;
 }
 
+       
   .container .text-box .but1:hover
         {
         	background:#30C29A;
