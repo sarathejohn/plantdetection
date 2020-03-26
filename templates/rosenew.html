@@ -7,48 +7,19 @@
 	<link rel="stylesheet" type="text/css" href="../static/stylenew.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container ">
 		<div class="img-box">
-			<img id="pic" src="../static/ros.png"></div>
-			<div class="text-box">
-				<h1><label id="title"></label><br><span id="det"></span></h1>
-				<p id="details"></p>
-				<button onclick="window.location.href='1.htm'">Back</button>
-				<button onclick="save()">Save</button>
+		 <img class="img" src="../static/ros.png"></div>
+		<div class="text-box" >
+			<h1>Rose<br><span>scientific name</span></h1>
+			<div class="scroll">
+				<p>A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp pricklesA rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and thousands of cultivars. They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp prickles</p>
+			</div>
+				<button class="but1">save</button>
+				<button class="but2">Report</button>
+				<button class="but3">back</button>
 			</div>
 		</div>
-		<script>
-			var ip= 'http://localhost:8050';
-			data=localStorage.getItem('data');
-			data=data.split("|");
-			console.log(data);
-			document.getElementById('det').innerHTML=data[1]+"<br>"+data[2];
-			document.getElementById('details').innerHTML=data[3];
-			imgsrc = 'data:image/png;base64,'+data[4];
-			document.getElementById('pic').setAttribute('src',imgsrc);
-			flowername=data[4].replace()
-			document.getElementById('title').innerHTML=data[0];
-        //document.getElementById('details').innerHTML=data;
-        function save(){
-        	email=localStorage.getItem('email');
-        	if(email==null){
-        		option=confirm("You need to login to save");
-        		if(option){
-        			window.location.href="new12.htm"
-        		}
-        	}
-        	else{
-        		var xhttp = new XMLHttpRequest();
-        		xhttp.onreadystatechange = function() {
-        			if (this.readyState == 4 && this.status == 200) {
-        				alert('search has been saved');
-        			}
-        		};
-        		xhttp.open("GET", ip+"/insertsearch?email="+email+"&data="+data[0], true);
-        		xhttp.send();
-        	}
-        }
-        
-    </script>
+<a href="#" class="close">
 </body>
 </html>

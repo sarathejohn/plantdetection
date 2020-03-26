@@ -60,12 +60,12 @@ html, div {
         }
         #panel ul li
         {
-        	color: rgba(230,230,230,0.9);
-        	list-style: none;
-        	padding: 15px 10px;
-        	border-bottom: 1px solid rgba(100,100,100,0.3);
-
-        }
+        	    color: rgba(230,230,230,0.9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+    cursor: pointer;
+            }
         #panel .toggle-btn
         {
         	position: absolute;
@@ -247,18 +247,18 @@ footer p {
 			cursor: pointer;
 		}
 #canvas{
-	        position: relative;
+	       position: relative;
     height: 562px;
     width: 453px;
     left: 791px;
-    top: 75px;
-    background-color: #483a00;
+    top: 17px;
+    background-color: #91c230cc;
     z-index: 2;
     display: none;
 		}
 		#canvas button{
            position: relative;
-    top: 452px;
+    top: 396px;
     left: 46px;
     width: 93px;
     height: 41px;
