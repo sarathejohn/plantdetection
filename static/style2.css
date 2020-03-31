@@ -206,6 +206,8 @@ background: black;
             width: 800px;
             margin-top: 47px;
             background-color: #ffffff;
+            width: 621px;
+             height: 56px;
         }
 
         .header-search-box:hover {
@@ -245,19 +247,19 @@ footer p {
 			cursor: pointer;
 		}
 #canvas{
-	     position: relative;
+	        position: relative;
     height: 562px;
     width: 453px;
-    left: 29%;
-    top: 16px;
+    left: 791px;
+    top: 75px;
     background-color: #483a00;
     z-index: 2;
     display: none;
 		}
 		#canvas button{
-        position: relative;
-    top: 119px;
-    left: 34px;
+           position: relative;
+    top: 452px;
+    left: 46px;
     width: 93px;
     height: 41px;
     margin: 65px;
@@ -277,13 +279,7 @@ footer p {
             background: #2196f3;
 
         }
-		#pic{
-width: 64%;
-    position: relative;
-    top: 17%;
-    left: 15%;
-		}
-        .now
+          .now
         {
              position: relative;
     height: 618px;
@@ -293,50 +289,127 @@ width: 64%;
     background-color: white;
     z-index: 2;
         }
-@media (max-width: 1080px)
+		#pic{
+    width: 400px;
+    position: absolute;
+    top: 37px;
+    height: 400px;
+    left: 26px;
+    object-fit: contain;
+    object-position: center;
+        }
+
+@media (max-width:1440px)
 {
-    body
+     body
     {
         height: auto;
         width: auto;
     }
-button {
-    left: 628px;
-    height: auto;
-    width: auto;
+   button {
+    left: 960px;
+    height: 35px;
+    width: 100px;
 }
-.header-search-box {
-    left: 201px;
 }
-.immg {
-    left: 14px;
+@media screen and (max-width:1280px)
+{
+   button {
+            left: 859px;
+    height: 35px;
+    width: 100px;
 }
-   #canvas
-{     left: 22%;
-    top: 24%;
 }
+@media screen and (max-width:640px)
+{
+      button {
+             left: 215px;
+    top: -252px;
+    height: 34px;
+     }
+   .header-search-box {
+        left: 20px;
+    width: 562px;
+    top: 372px;
+    height: 111px;
+        }
+    .center-line 
+    {
+            height: 89px;
+    top: 11px;
+    }
+    .immg
+    {
+               left: -176px;
+    top: -149px;
+    height: 306px;
+    }
+     .search-input
+     {
+
+     }
+}
+@media screen and (max-width:450px)
+{
+     button {
+                    left: 62px;
+    width: 91px;
+    height: 30px;
+    position: relative;
+    top: -248px;
+     }
+      .immg
+      {
+               left: -279px;
+    top: -209px;
+    height: 199px;
+
+      }
+      .header-search-box 
+      {
+
+        left: 28px;
+    width: 380px;
+    top: 232px;
+      }
+       .search-input
+     {
+            position: relative;
+    top: 3px;
+    width: 235px;
+    font-size: 13px;
+
+     }
+}
+@media screen and (max-width:360px)
+{
+     button
+      {
+    left: -18px;
+    top: -247px;
+    }
+     .immg
+      {
+            top: -163px;
+    left: -302px;
+      }
+       .header-search-box 
+      {
+            width: 328px;
+    top: 315px;
+    left: 13px;
+      }
+        .search-input
+     {
+            left: -16px;
+     }
+      .center-line 
+    {
+            left: 247px;
+    }
+
 
 }
-@media (max-width: 1200px)
-{
-    body
-    {
-        height: auto;
-        width: auto;
-    }
-button {
-    left: 628px;
-    height: auto;
-    width: auto;
-}
-.header-search-box {
-    left: 201px;
-}
-.immg {
-    left: 14px;
-}
-   #canvas
-{     left: 22%;
-    top: 24%;
-} 
-}
+
+
+ 
